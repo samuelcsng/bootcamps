@@ -34,6 +34,14 @@ public class SelfExercise {
       System.out.println("invalid age range...must be +ve");
     }
 
+    System.out.println();
+    System.out.println("Challenge:");
+    int x = 3;
+    int y = (x++ + 3) * x++;
+    // (3 + 3) * 4
+    System.out.println(y);
+    System.out.println(x);
+
 
   }
 }

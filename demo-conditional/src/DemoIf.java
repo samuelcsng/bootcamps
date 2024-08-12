@@ -115,6 +115,8 @@ public class DemoIf {
     strOutput = strOutput + "a";
     System.out.println(strOutput);
     System.out.println(s.charAt(strLength - 1));
+    s = "" + s.charAt(2) + s.charAt(1) + s.charAt(0); // char + char + char
+    System.out.println(s); // cba
     // The reversed string is cba
 
     // Example 8
@@ -123,17 +125,40 @@ public class DemoIf {
     // 2. Not Divided by 100
     // 3. Or divided by 400
 
-    int year = 2400;
-    boolean check1 = year % 4 == 0;
-    boolean check2 = year % 100 != 0;
-    boolean check3 = year % 400 == 0;
-    boolean checkAll = check1 && check2 || check3;
-    // System.out.println(check1 + " " + check2 + " " + check3);
+    int year = 2003;
 
-    if (checkAll) {
+    if (false) {
+      boolean check1 = year % 4 == 0;
+      boolean check2 = year % 100 != 0;
+      boolean check3 = year % 400 == 0;
+      boolean checkAll = check1 && check2 || check3;
+      if (checkAll) {
+        System.out.println(year + " is a leap year.");
+      } else {
+        System.out.println(year + " is not a leap year");
+      }
+    }
+
+    boolean isLeapYear = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+
+    boolean isLeap = false;
+    if (year % 4 == 0) { // 2004
+      if (year % 100 == 0) { // 1900, 2000
+        if (year % 400 == 0) { // 2000
+          isLeap = true;
+        } else { // 1900
+          isLeap = false;
+        }
+      } else { // 2004
+        isLeap = true;
+      }
+    } else { // 2003
+      isLeap = false;
+    }
+    if (isLeap) {
       System.out.println(year + " is a leap year.");
     } else {
-      System.out.println(year + " is not a leap year");
+      System.out.println(year + " is not a leap year.");
     }
 
     // 1900 is not a leap year.
@@ -145,7 +170,7 @@ public class DemoIf {
 
     // Example 9
     int age = 15;
-    boolean isCitizen = true;
+    boolean isCitizen = false;
 
     boolean isLargerThan18 = age >= 18;
     boolean eligibleToVote = isCitizen && isLargerThan18;
@@ -168,12 +193,13 @@ public class DemoIf {
 
     // Example 10
     double totalPurchase = 250.0;
-    double discount;
-    double amountToPay;
-
     // >=500.0 -> 20% off
     // >=200.0 -> 10% off
     // < 200.0 -> no discount
+    double discount = 0.0d;
+    double amountToPay = 0.0d;
+
+
     if (totalPurchase >= 500.0) {
       discount = totalPurchase * 0.2;
       amountToPay = totalPurchase * 0.8;
@@ -199,10 +225,9 @@ public class DemoIf {
 
 
     // Example 11
-    char c = 'c';
+    char c = 'a';
     // a e i o u -> vowel
     boolean isVowel = c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
-
     if (isVowel) {
       System.out.println(c + " is vowel.");
     } else {
@@ -226,20 +251,29 @@ public class DemoIf {
     // # ! @ $ -. special character
     // password length >=12
 
+    boolean withoutSpecialChar = false;
+    if (password.length() >= 12) {
+      withoutSpecialChar = !password.contains("#") && !password.contains("!")
+          && !password.contains("@") && !password.contains("$");
+      if (withoutSpecialChar) {
+        System.out.println("It is a weak password. No special character.");
+      } else {
+        System.out.println("It is a strong password.");
+      }
+    } else {
+      System.out.println("It is a weak password. Length < 12.");
+    }
+
     // It is a strong password.
     // It is a week password. No special character.
     // It is a week password. Length < 12.
-    boolean hasSpecialChar = password.contains("#") || password.contains("!")
-        || password.contains("@") || password.contains("$");
-    int passwordLength = password.length();
-    boolean isStrongPassword = hasSpecialChar && passwordLength >= 12;
-    if (isStrongPassword) {
-      System.out.println("It is a strong password");
-    } else if (hasSpecialChar == false && passwordLength >= 12) {
-      System.out.println("It is a weak password. No special character.");
-    } else if (hasSpecialChar && passwordLength < 12) {
-      System.out.println("It is a weak password. Length < 12");
-    }
+
+    // testcase
+    // Admin1234567# -> xxx
+    // Admin1234#
+    // Admin123
+    // Admin123456789
+
 
   }
 }

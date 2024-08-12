@@ -18,7 +18,7 @@ public class DemoScanner {
       System.out.println("the user input is an odd number");
     }
 
-    s.close();
+    // s.close();
     // the user input is an odd number
     // the user input is an even number
 
@@ -43,24 +43,25 @@ public class DemoScanner {
 
     System.out
         .println("Choose an option: 1) Deposit 2) Withdraw 3) Check Balance");
-    Scanner option = new Scanner(System.in);
-    int optionInput = option.nextInt();
+    // Scanner option = new Scanner(System.in);
+    // int optionInput = option.nextInt();
+    int optionInput=s.nextInt();
 
     if (optionInput == 1) {
       System.out.println("Please input the deposit amount: ");
-      optionInput = option.nextInt();
-      currentBalance = currentBalance + optionInput;
-      System.out.println("Print out current balance: " + currentBalance);
+      // optionInput = option.nextInt();
+      // currentBalance = currentBalance + optionInput;
+      // System.out.println("Print out current balance: " + currentBalance);
     } else if (optionInput == 2) {
       System.out.println("Please input the withdrawal amount:");
-      optionInput = option.nextInt();
-      currentBalance = currentBalance - optionInput;
-      System.out.println("Print out current balance: " + currentBalance);
+      // optionInput = option.nextInt();
+      // currentBalance = currentBalance - optionInput;
+      // System.out.println("Print out current balance: " + currentBalance);
     } else if (optionInput == 3) {
-      System.out.println("Print out current balance: " + currentBalance);
+      System.out.println("Current balance: " + currentBalance);
     }
 
-    option.close();
+    
 
 
   }
