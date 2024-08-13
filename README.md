@@ -96,3 +96,39 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 - Arrays.toString(arrayName); // to print out array
 
 - array swap elements
+
+***
+## Week-2 Day-1 20240812
+- git init (from local machine)
+
+- Memory(Cache)
+  - Stack Memory
+  - Heap Memory
+
+- bubble sort
+
+- 2D array
+
+- ASCII code
+  - 0 -> 48
+  - A -> 65
+  - a -> 97
+
+- byte -> short -> int -> long -> float -> double
+-          char -> int -> long -> float -> double
+
+- downcasting, explicit type conversion
+
+
+
+***
+## Week-2 Day-2 20240813
+
+***
+## Week-2 Day-3 20240814
+
+***
+## Week-2 Day-4 20240815
+
+***
+## Week-2 Day-5 20240816

@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class DemoArray {
@@ -94,7 +95,7 @@ public class DemoArray {
     }
     System.out.println("The longest string=" + longestString);
 
-    // Eample 4
+    // Example 4
     double[] prices = new double[4];
     prices[0] = 10.3;
     prices[1] = 7.7;
@@ -191,9 +192,159 @@ public class DemoArray {
         arr10[i] = backup2;
       }
     }
+    System.out.println(Arrays.toString(arr10));
 
+    for (int i = 0; i < arr10.length - 1; i++) {
+      // swap
+      backup2 = arr10[i];
+      arr10[i] = arr10[i + 1];
+      arr10[i + 1] = backup2;
+    }
     System.out.println(Arrays.toString(arr10)); // [4, 3, 2, 1, 0, 9]
 
+    // Example 9
+    int[] arr11 = new int[] {100, -100, -4, 5, -2, 200, 9};
+    // Move the max value to tail
+    // [x, x, x, x, x, x, 200]
+    int maxValue = 0;
+    for (int i = 0; i < arr11.length; i++) {
+      if (arr11[i] > maxValue) {
+        maxValue = arr11[i];
+      }
+    }
+    arr11[arr11.length - 1] = maxValue;
+    System.out.println(Arrays.toString(arr11));
+
+    int backup3 = -1;
+    for (int i = 0; i < arr11.length - 1; i++) {
+      if (arr11[i] > arr11[i + 1]) {
+        backup3 = arr11[i];
+        arr11[i] = arr11[i + 1];
+        arr11[i + 1] = backup3;
+      }
+    }
+    System.out.println(Arrays.toString(arr11));
+
+    // Example 10
+    int[] arr12 = new int[] {100, -100, -4, 5, -2, 200, 9};
+    // sum all values
+    // 208
+    int sum = 0;
+    for (int i = 0; i < arr12.length; i++) {
+      sum += arr12[i];
+    }
+    System.out.println("sum=" + sum);
+
+    // Example 11 - Bubble Sort
+    // refer to example 9
+    // Sorting
+    long[] arr13 = new long[] {10, 3, -4, 9, 100, 70};
+    // [-4, 3, 9, 10, 70, 100]
+    // Move the max value to the tail repeatedly
+
+    // 1st round: [10, 3, -4, 9, 70,100]
+    // 2nd round: [x, x, x, x, x, 70, 100]
+    // 3rd round: [x, x, x, 10, 70, 100]
+    // 4th round: ...
+    // last round: [-4, 3, 9, 10, 70, 100]
+    long backup4 = -1;
+    for (int i = 0; i < arr13.length - 1; i++) { // 5 times, 0,1,2,3,4
+      for (int j = 0; j < arr13.length - i - 1; j++) { // Move max value to tail
+        // swap
+        if (arr13[j] > arr13[j + 1]) {
+          backup4 = arr13[j];
+          arr13[j] = arr13[j + 1];
+          arr13[j + 1] = backup4;
+        }
+      }
+      System.out.println(i + " " + Arrays.toString(arr13));
+    }
+
+    // Arrays.sort(arr13);
+    // System.out.println(Arrays.toString(arr13));
+
+
+    // default value for int[]
+    int[] arr14 = new int[4];
+    System.out.println(Arrays.toString(arr14)); // [0,0,0,0]
+
+    // default value for boolean[]
+    boolean[] arr15 = new boolean[3];
+    System.out.println(Arrays.toString(arr15)); // [false, false, false]
+
+    // default value for char[]
+    char[] arr16 = new char[3];
+    arr16[0] = ' ';
+    arr16[1] = '\u0000';
+    arr16[2] = ' '; // [ , , ]
+    System.out.println(Arrays.toString(arr16));
+
+    arr16[1] = ' '; // [, , ]
+    System.out.println(Arrays.toString(arr16));
+
+    if (arr16[0] == '\u0000') { // true
+      System.out.println("it is a space character.");
+    }
+
+    // String[], length 3
+    // 2 ways to declare String array
+    String[] arr17 = new String[] {"hello", "abc", "def"}; // fixed length 3
+    System.out.println(arr17[1]); // abc
+    arr17 = new String[4];
+    // Create String array object (heap memory)
+    // arr17 -> Object Reference (Variable)
+    arr17[2] = "ijk";
+    // Create String object, and assign String address to one of the addresses inside the array
+    System.out.println(Arrays.toString(arr17)); // [null, null, "ijk", null]
+
+    // 2D Array
+    int[][] arr18 = new int[2][3]; // 2 rows (index 0,1) x 3 columns (0,1,2)
+    arr18[1][1] = 100;
+    arr18[1][2] = -99;
+    arr18[0][1] = 1;
+    // arr18[2][1] == 11; // error
+    System.out.println(Arrays.deepToString(arr18)); // [[0,1,0],[0,100,-99]]
+
+    System.out.println(arr18.length); // row length -> 2
+    System.out.println(arr18[0].length); // column length -> 3
+    System.out.println(arr18[1].length); // column length -> 3
+
+    // for loop -> access 2D array
+    for (int i = 0; i < arr18.length; i++) { // row -> 2
+      for (int j = 0; j < arr18[0].length; j++) { // column -> 3 -> reset
+        System.out.println("[" + i + "][" + j + "]=" + arr18[i][j]);
+      }
+    }
+
+    // Example 12
+    int count = 0;
+    int[] arr19 = new int[] {9, 4, 2, 2, 3, 9, 3};
+    // The number of 2 = 2
+    for (int i = 0; i < arr19.length; i++) {
+      if (arr19[i] == 2) {
+        count++;
+      }
+    }
+    System.out.println("The number of 2 = " + count);
+
+    // given int value: 0 < x < 9
+    int[] arr20 = new int[] {9, 4, 2, 2, 0, 3, 9, 9, 3};
+    // Fin the Max. Count's value -> 9
+
+    int[] counts = new int[10]; // 0 - 9
+    for (int i = 0; i < arr20.length; i++) {
+      counts[arr20[i]]++; // ***
+    }
+    int max2 = 0;
+    int target = -1;
+    for (int i = 0; i < counts.length; i++) {
+      if (counts[i] > max2) {
+        max2 = counts[i];
+        target = i;
+      }
+    }
+    System.out.println(Arrays.toString(counts));
+    System.out.println("Max. Count's value=" + target); // Max. Count's value=9
 
 
   } // end of main()
