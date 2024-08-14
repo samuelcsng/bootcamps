@@ -73,6 +73,40 @@ public class DemoCharInt {
     // overflow
     System.out.println(asset); // -2094967296
 
+    // double -> int (precision loss)
+    double d10 = 10.25;
+    int x5 = (int) d10;
+    System.out.println(x5); // 10.25 -> 10
+    d10 = 10.99;
+    x5 = (int) d10;
+    System.out.println(x5); // 10.99 -> 10
+
+    // overflow + for loop (careless mistake)
+    // for (int i = 0; i < 2_200_000_000L; i++) {
+    // System.out.println("hello");
+    // }
+
+    byte b20 = 7;
+    int i20 = 8;
+    boolean result = b20 < i20; // true
+
+    // byte b21 = 128; // compile error, NOT overflow;
+    int i21 = 128;
+    byte b22 = (byte) i21; // overflow
+    System.out.println(i21 + " " + b22);
+
+    int[] arr2 = new int[3];
+    max = Integer.MIN_VALUE; // -2094967296
+    for (int i = 0; i < arr2.length; i++) {
+      if (arr2[i] > max) {
+        max = arr2[i];
+      }
+    }
+
+    long l2 = Long.MIN_VALUE; // -9223372036854775808
+    System.out.println(l2); // 2^-63
+
+
 
   } // end of main
 }

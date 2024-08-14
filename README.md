@@ -1,8 +1,9 @@
 # bootcamps
-
+***
 ## Week-1 Day-1 20240805
 - Installation
 
+***
 ## Week-1 Day-2 20240806
 - Primitives (int, double ...)
   - Higher/Lower level types (long > int > short > byte) (double > float)
@@ -32,7 +33,7 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
     // git commit -m "2024.08.06"
     // git push
 
-
+***
 ## Week-1 Day-3 20240807
 - for ALL non-primitive types:
   - DO NOT use "==" 
@@ -56,7 +57,7 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 
 
 
-
+***
 ## Week-1 Day-4 20240808
 
 - for loop
@@ -73,7 +74,7 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 
 
 
-
+***
 ## Week-1 Day-5 20240809
 
 - Infinite Loop
@@ -118,11 +119,56 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 -          char -> int -> long -> float -> double
 
 - downcasting, explicit type conversion
+- double->int (precision loss)
 
 
 
 ***
 ## Week-2 Day-2 20240813
+
+- Class
+- Wrapper Class
+- object reference (stores object address)
+- 8 primitives + 8 wrapper classes + String
+- auto-boxing and unboxing
+- .compareTo()
+- Character.charValue()
+
+- String methods
+  - indexOf()
+  - lastIndexOf()
+  - concat()
+  - startsWith()
+  - endsWith()
+  - ...
+
+- Array insertion sort
+
+- Arrays.copyOf()
+
+- Pass by reference vs Pass by value
+- RULE OF THUMB:
+  - 8 Primitives + 8 Wrapper Classes + String -> Pass by value
+  - Other than that -> Pass by reference
+
+
+
+  - Static Methods
+    public class ABC {
+      // main method
+      public static void main(String[] args) {
+        calculateCircleArea(3.0);
+      }
+
+      // customer method
+      public static double calculateCircleArea(double radius){
+        return ...:
+      }
+    }
+
+
+
+
 
 ***
 ## Week-2 Day-3 20240814

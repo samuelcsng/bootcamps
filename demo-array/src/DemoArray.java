@@ -346,6 +346,62 @@ public class DemoArray {
     System.out.println(Arrays.toString(counts));
     System.out.println("Max. Count's value=" + target); // Max. Count's value=9
 
+    // Arrays.copyof()
+    // Problem
+    // arr4 -> ojb ref
+    // int array object
+    int[] arr4 = new int[] {1, 2, 3};
+    arr4 = new int[] {2, 3, 4};
+
+    // We have 2 object reference, but one object
+    // Example 1
+    int[] arr21 = new int[] {1, 2, 3};
+    int[] arr22 = arr21; // Pass by reference
+    System.out.println(arr21[2]); // 3
+    System.out.println(arr22[2]); // 3
+
+    System.out.println(arr22[1]); // 2
+    arr21[1] = 100;
+    System.out.println(arr21[1]); // 100
+    System.out.println(arr22[1]); // 100
+
+    // Example 2 (primitive)
+    int x1 = 10;
+    int x4 = x1; // Pass by value
+    System.out.println(x4); // 10
+
+    x1 = 100;
+    System.out.println(x1); // 100
+    System.out.println(x4); // 10
+
+    // Example 3 (Wrapper Class / String)
+    String s1 = "abc";
+    String s2 = s1; // Pass by value
+    s1 = "def";
+    System.out.println(s1); // def
+    System.out.println(s2); // abc
+
+
+
+    // Conclusion
+    // 8 Primitives + 8 Wrapper Classes + String -> Pass by value
+    // Other than that -> Pass by reference
+
+    // For Pass by reference -> you can refer to example 1.
+    // for Pass by value -> you can refer to example 2 and 3
+
+    // How to backup an array?
+    // Arrays.copyOf()
+    // Heap memory -> create another int array
+    // define the length of the new array
+    int[] backupArray = Arrays.copyOf(arr21, arr21.length);
+    System.out.println(Arrays.toString(backupArray));
+
+    // Bubble Sort/ Insertion Sort (Nested Loop)
+    int[] beforeSort = new int[] {30, -3, 100, -102};
+    Arrays.sort(beforeSort); // passByReference; performance: nlogn
+    System.out.println(Arrays.toString(beforeSort));
+
 
   } // end of main()
 }
