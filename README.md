@@ -140,12 +140,17 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
   - concat()
   - startsWith()
   - endsWith()
+  - compareTo()
   - ...
+
+- down casting
+  - (int) longNumber;
 
 - Array insertion sort
 
 - Arrays.copyOf()
 
+- object reference
 - Pass by reference vs Pass by value
 - RULE OF THUMB:
   - 8 Primitives + 8 Wrapper Classes + String -> Pass by value
@@ -154,6 +159,7 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 
 
   - Static Methods
+  ```
     public class ABC {
       // main method
       public static void main(String[] args) {
@@ -165,13 +171,31 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
         return ...:
       }
     }
-
+```
 
 
 
 
 ***
 ## Week-2 Day-3 20240814
+
+- Static Method (public static)
+- Instance Method
+
+- Method Signature = Method Name + Number of Parameters & Type of Parameters
+
+
+- while loop
+
+- random number
+
+- for-each loop
+
+- java -->> coding velocity, code readability
+
+
+
+
 
 ***
 ## Week-2 Day-4 20240815

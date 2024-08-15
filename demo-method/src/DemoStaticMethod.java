@@ -27,14 +27,102 @@ public class DemoStaticMethod {
     }
     System.out.println(totalArea);
 
+    // input (parameters) -> "abc"
+    String encrypted = encrypt("abc");
+    System.out.println(encrypted); // EEI
+
+    String original = decrypt(encrypted);
+    System.out.println(original); // abc
+
+    // if output type = String, then you must return String value inside the method
+
+
+
+    // Static Method
+    // encrypt("abc") // System.out.println("hello")
+
+    // Instance Method
+    // "abc".charAt(0) -> object presentation
+
+    System.out.println(charAt("abc", 1)); // b
+
+    // Compiler know which method the caller is referring during compile time.
+    System.out.println(sum(1, 2)); // (int, int)
+
+    // during compile time, checked that there is no sum(double, double)
+    // System.out.println(sum(1.3, 2.2)); // compile error
+
+    System.out.println(sum(1L, 2L)); // (long, long) -> (float, float)
+    System.out.println(sum((byte) 1, (byte) 2)); // (byte,byte)->(int,int)
+    System.out.println(sum(1.2f, 8.8f)); // (float, float)
+
+    // during compile time, checked that there is no sum(String, String)
+    System.out.println(sum("123", "234"));
+
+    System.out.println(sum(1, 2, 3)); // (int, int, int)
+
+    double d1 = sum(1.2f, 2.0f); // float -> double
+    long l1 = sum(1.2f, 2.0f).longValue(); // float -> long
+
+    // 10.longValue(); // NOT OK
+    new Integer(10).longValue(); // OK, longValue() -> instance method
+
+    print(5, 6); // sysout
+
+    calculateAreaForCircle(3.0);
+    calculateAreaForSquare(3.0);
+
+    
+
 
   } // end of main()
 
+  // calculateSquareArea
+  public static double calculateAreaForSquare(double length) {
+    return Math.pow(length, 2.0);
+  }
+
+
+  public static char charAt(String s, int i) {
+    return s.charAt(i);
+  }
 
 
   // input String -> output String
+  public static String encrypt(String password) {
+    char[] characters = password.toCharArray();
+    String encrypted = "";
+    for (int i = 0; i < characters.length; i++) {
+      encrypted += (char) ((characters[i] + 3) * 2);
+    }
+    return encrypted;
+  }
+
+  public static String encrypt2(String password) {
+    char[] characters = password.toCharArray();
+    String encrypted = "";
+    int sum = 0;
+    for (int i = 0; i < characters.length; i++) {
+      sum += characters[i]; // int + char
+    }
+    int result1 = sum / 4;
+    int result2 = sum % 4;
+    // sum=17, result1 = 4, result2 = 1
+    return encrypted;
+  }
+
+  public static String decrypt(String encrypted) {
+    char[] characters = encrypted.toCharArray()
+    String original ="";
+    for (int i=0;i<characters.length;i++){
+      original += (char)(characters.length);
+    }
+    return "abc";
+  }
+
+
   // input String , String -> output Integer
-  public String abc(String a, String b) {
+  public String methodName(String a, String b) {
     return "abc";
   }
 
@@ -43,10 +131,38 @@ public class DemoStaticMethod {
   // Method name -> start with verb
 
   // input double, output double
-  public static double calculateCircleArea(double radius) {
+  public static double calculateAreaForCircle(double radius) {
     // return radius * radius * Math.PI;
     // pow(base, index) -> base^index
     return Math.pow(radius, 2.0) * Math.PI;
   }
 
-}
+  // Method Signature = Method Name + Number of Parameters & Type of Parameters
+  // You can reuse the method name as long as they have different method signature
+  public static int sum(int x, int y) {
+    System.out.println("a");
+    return x + y;
+  }
+
+  public static int sum(int x, int y, int z) {
+    System.out.println("b");
+    return x + y + z;
+  }
+
+  // Method Signature
+  // sum(float x, float y) != sum(int x, int y)
+  public static Float sum(float x, float y) {
+    System.out.println("Method sum(double x, double y)");
+    float result = x + y;
+    return new Float(x + y); // return Float object
+  }
+
+  // Return Type: primitives + wrappper + String
+  // void -> return nothing (No "return" keyword)
+  public static void print(int x, int y) {
+    System.out.println("x=" + x);
+    System.out.println("y=" + y);
+  }
+
+
+} // end of class
