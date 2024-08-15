@@ -160,6 +160,7 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 
   - Static Methods
 
+
     public class ABC {
       // main method
       public static void main(String[] args) {
@@ -171,6 +172,8 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
         return ...:
       }
     }
+
+
 
 
 
