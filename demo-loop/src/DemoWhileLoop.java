@@ -86,6 +86,15 @@ public class DemoWhileLoop {
     }
     System.out.println(sum); // 10
 
+    //
+    int num = 54321;
+    String result = "";
+    while (num > 0) {
+      result += num % 10; // retrieve, String + int
+      num /= 10; // 54321 -> 5432 -> 543 -> 54 -> 5 -> 0 (exit)
+    }
+    System.out.println(result); // 12345
+
 
 
   } // end of main()

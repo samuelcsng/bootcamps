@@ -257,6 +257,14 @@ public class DemoForLoop {
     System.out.println(num);
 
 
+
+    // String
+    // char[], ASCII, int
+
+    // Method -> 3 types
+    // 1. searching (contains, indexOf, lastIndexOf)
+    // 2. presentation (length, charAt, isEmpty, isBlank, substring)
+    // 3. transform (replace, trim, toLowerCase, toUpperCase)
     
 
 

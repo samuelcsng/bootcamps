@@ -1,5 +1,8 @@
 public class DemoForEachLoop {
   public static void main(String[] args) {
+// Main Difference between for-loop and for-each loop
+// for loop -> able to access all elements during each iteration
+// for-each -> easy to read/use, because no index
 
     // for loop
     int[] arr = new int[] {2, 9, 10, -3};
@@ -26,8 +29,22 @@ public class DemoForEachLoop {
       if (fruit != null && "o".equals(fruit.substring(0, 1))) {
         System.out.println(fruit.charAt(fruit.length() - 1));
       }
-
     }
+
+    // default value - Wrapper Class / String
+    Integer x = null;
+    System.out.println(x); // null
+    // x.intValue(); // error
+
+    String s=null;
+    System.out.println(s);
+    // s.charAt(0) // error, Null Pointer Exception
+
+    s=""; // empty is an String object
+    // s.charAt(0); // error, not NPE, java.lang.StringIndexOutOfBoundsException
+    s.length(); // 0
+
+
 
 
 

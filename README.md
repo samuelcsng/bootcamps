@@ -203,5 +203,23 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 ***
 ## Week-2 Day-4 20240815
 
+- array[idx++] = ... // access and than increment idx
+
+- class object
+
+- class
+  - blueprint
+  - private attributes
+  - getXXX(), setXXX(), instance methods (object methods)
+  - Presentation
+  - constructor
+  - empty constructor implicitly exists
+  - constructor signature
+
+
+
+
+
+
 ***
 ## Week-2 Day-5 20240816
