@@ -40,10 +40,29 @@ public class JavaQuest14 {
   // Code a method here to return true if the integer is palindrome, otherwise
   // false
   public static boolean palindrome(int num) {
-    int[] digit;
-    for (int i = 0; i < num % 2; i++) {
-      
+    if (num < 0) {
+      return false;
+    } else if (num < 10) {
+      return true;
     }
+
+    int numOfDigits = (int) Math.log10(num) + 1;
+    int[] digits = new int[numOfDigits];
+    int temp = num;
+    for (int i = numOfDigits; i > 0; i--) {
+      digits[i - 1] = temp % 10;
+      // System.out.println(temp + " " + digits[i - 1]);
+      temp = temp / 10;
+    }
+
+    for (int i = 0; i < numOfDigits / 2; i++) {
+      if (digits[i] != digits[numOfDigits - i - 1]) {
+        return false;
+      }
+    }
+
     return true;
+
+
   } // end of method()
 }
