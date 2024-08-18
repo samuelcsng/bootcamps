@@ -1,10 +1,12 @@
+import java.util.Arrays;
+
 public class StringBox {
   private char[] characters; // obj ref
 
   // new String
   public StringBox(String s) {
     // s -> char[]
-    this.characters = new char[s.length()]; // VIP, easy to miss out
+    this.characters = new char[s.length()]; // *** VIP, easy to miss out
     // System.out.println("before" + this.charAt(1)); // "\u0000"
 
     for (int i = 0; i < s.length(); i++) {
@@ -14,6 +16,16 @@ public class StringBox {
     // System.out.println("after" + this.charAt(1));
 
     // this.characters = s.toCharArray();
+  }
+
+  public char[] getCharacters() {
+    return this.characters;
+  }
+
+  // design: revise the data of the object
+  // difference between setCharAt() and replace()
+  public void setCharAt(char c, int index) {
+    this.characters[index] = c;
   }
 
   // sb.charAt
@@ -44,12 +56,12 @@ public class StringBox {
     return String.valueOf(arr); // new String(arr)
   }
 
-  public String subString(int beginIndex, int endIndex) {
-    char[] arr = new char[endIndex - beginIndex + 1];
-    for (int i = 0; i < arr.length; i++) {
-      arr[i] = this.characters[beginIndex + i];
+  public String substring(int beginIndex, int endIndex) {
+    char[] arr = new char[this.characters.length];
+    for (int i = beginIndex; i < endIndex; i++) {
+      arr[i] = this.characters[i];
     }
-    return String.valueOf(arr);
+    return String.valueOf(arr); // char[] -> String
   }
 
   public String toString() {
@@ -77,7 +89,28 @@ public class StringBox {
     System.out.println(newStr2); // "abx"
     System.out.println(sb); // "abc"
 
+    System.out.println(s.substring(0, 2)); // ab
+    System.out.println(sb.substring(0, 2)); // ab
 
+    // Pass by reference
+    StringBox sb2 = sb; // StringBox Object address
+    System.out.println(sb); // abc
+    System.out.println(sb2); // abc
+    sb.setCharAt('a', 2); // abc -> aba
+    System.out.println(sb); // aba
+    System.out.println(sb2); // aba
+
+    char[] arr = sb.getCharacters();
+    arr[0] = 'm';
+
+    System.out.println(sb); // mba
+    System.out.println(sb2); // mba
+
+    // remove the linkages between sb/sb2 and StringBox Object
+    sb = null;
+    sb2 = null;
+    // but the char array still exit
+    System.out.println(Arrays.toString(arr)); // [m, b, a]
 
   } // end of main()
 

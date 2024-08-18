@@ -223,3 +223,33 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 
 ***
 ## Week-2 Day-5 20240816
+
+- all-arg constructor
+- empty constructor
+- instance methods:
+  - to create new
+  - to modify 
+  - to transform
+
+- Math. method
+
+- BigDecimal (double)
+  - BigDecimal.divide()
+  - BigDecimal.valueOf()
+  - .equals()
+  - .compareTo()
+
+
+- reference trap
+- copy constructor
+- Mutable Object 
+  > object with setters -> reference trap -> solution: "copy constructor"
+  > RULE OF THUMB: avoid setting variables equal to each other -> both variables will share a reference to the same object
+  > (in Java) Arrays are Mutable Objects -> Arrays.copyOf(object, object.length)
+  > bug fixing: constructor, copy constructor, getter, setter
+- overriding object.toString() method
+- deep copy constructor
+- deep copying:
+  - duplicate an object
+  - protects the internal state of an object(or class) from external modification
+  - prevent exposing the internal state of the object)
