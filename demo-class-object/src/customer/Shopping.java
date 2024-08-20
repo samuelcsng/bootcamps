@@ -1,7 +1,5 @@
 package customer;
 
-import java.beans.Customizer;
-
 public class Shopping {
   public static void main(String[] args) {
     // Create customer
@@ -35,10 +33,14 @@ public class Shopping {
     Item[] items2 = new Item[] {apple2, orange2};
     Order order2 = new Order(items2);
 
-    User user = new User(new Order[] {order, order2});
-    System.out.println(user.getNumberOfOrders());
-    System.out.println(user.getOrders()[0].getNumberOfItems());
-    System.out.println(user.getOrders()[1].getNumberOfItems());
+    // User user = new User(new Order[] {order, order2});
+    // System.out.println(user.getNumberOfOrders());
+    // System.out.println(user.getOrders()[0].getNumberOfItems());
+    // System.out.println(user.getOrders()[1].getNumberOfItems());
+
+    
+
+
 
 
   }

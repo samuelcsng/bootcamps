@@ -243,13 +243,44 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 - reference trap
 - copy constructor
 - Mutable Object 
-  > object with setters -> reference trap -> solution: "copy constructor"
-  > RULE OF THUMB: avoid setting variables equal to each other -> both variables will share a reference to the same object
-  > (in Java) Arrays are Mutable Objects -> Arrays.copyOf(object, object.length)
-  > bug fixing: constructor, copy constructor, getter, setter
+  - object with setters -> reference trap -> solution: "copy constructor"
+  - RULE OF THUMB: avoid setting variables equal to each other -> both variables will share a reference to the same object
+  - (in Java) Arrays are Mutable Objects -> Arrays.copyOf(object, object.length)
+  - bug fixing: constructor, copy constructor, getter, setter
 - overriding object.toString() method
 - deep copy constructor
 - deep copying:
   - duplicate an object
   - protects the internal state of an object(or class) from external modification
   - prevent exposing the internal state of the object)
+
+
+***
+## Week-3 Day-1 20240819
+
+- double * double -> always use BigDecimal
+- instance method
+  - presentation (derived)
+  - transform (replace, add, remove)
+
+- static (stack memory)
+- static method vs instance method
+- static method can NEVER return instance variable
+- className.method // only return static, not attributes
+
+
+
+***
+## Week-3 Day-2 20240820
+
+
+***
+## Week-3 Day-3 20240821
+
+
+***
+## Week-3 Day-4 20240822
+
+
+***
+## Week-3 Day-5 20240823
