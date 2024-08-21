@@ -273,6 +273,34 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
 ***
 ## Week-3 Day-2 20240820
 
+- private static
+
+- Summary (static vs instance)
+  // Static method return instance variable (NOT OK)
+  // Instance method return instance variable (OK)
+  // Static method return static variable (OK)
+  // Instance method return static variable (OK)
+
+    // static method, static variable, static class do not belongs to object
+  // so static stuff can be written to any class technically
+
+- Early return
+- Constant: static final
+- instance variable (for object)
+- static variable (for class)
+- static final variable (for class but cannot be modified)
+
+- Class.valueOf() vs static Class.ofValue method
+
+
+- // Constant(private static final)
+  // static variable
+  // instance variable
+  // 
+)
+
+
+
 
 ***
 ## Week-3 Day-3 20240821

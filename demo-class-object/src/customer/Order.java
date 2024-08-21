@@ -4,10 +4,14 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class Order {
+  private static int count = 0;
+
+  private int id; // system generate id
   private Item[] items; // one to many
   private String currency; // one to one
 
   public Order() {
+    this.id = getId();
     this.items = new Item[0]; // fixed length
   }
 
@@ -17,17 +21,22 @@ public class Order {
     // this.items=Arrays.copyOf(items, items.length);
   }
 
+  // static method
+  public static int getId() {
+    return ++count;
+  }
+
   // Method Signature: method name + parameter list (number + type)
   public void add(Item item) {
     // // Item[] newItems = Arrays.copyOf(this.items, this.items.length);
     // Item[] newItems = new Item[this.items.length + 1];
     // // code ...
     // for (int i = 0; i < newItems.length; i++) {
-    //   if (i < this.items.length) {
-    //     newItems[i] = this.items[i];
-    //   } else {
-    //     newItems[i] = item;
-    //   }
+    // if (i < this.items.length) {
+    // newItems[i] = this.items[i];
+    // } else {
+    // newItems[i] = item;
+    // }
     // }
     // this.items = newItems;
 

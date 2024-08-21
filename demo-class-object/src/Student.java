@@ -1,8 +1,18 @@
 public class Student {
-  private static String schoolName = "ABC school";
+  private static String schoolName = "ABC school"; // outside the Student Object
 
-  private String name;
-  private int age;
+  private String name; // inside the Student Object
+  private int age; // inside the Student Object
+
+  // !!! Summary (static vs instance)
+  // Static method return instance variable (NOT OK - compile error)
+  // Instance method return instance variable (OK)
+  // Static method return static variable (OK)
+  // Instance method return static variable (OK)
+
+  // !!!
+  // static method, static variable, static class do not belongs to object
+  // so static stuff can be written to any class technically
 
   public Student(String name, int age) {
     this.name = name;
