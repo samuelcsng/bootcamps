@@ -299,11 +299,56 @@ https://javahongkong.larksuite.com/wiki/NPWBwykCCivujTk1WHiuyzAosnh
   // 
 )
 
+----
+public class ClassName {
 
+- constant (public/private static final ...) (keyword: private static final type CONSTANT_NAME = ...)
+- static variable (public static ...) (keyword: static)
+- instance variable (private type varName ...)
 
+- public method vs static method (keyword: public/private static)
+
+- public constructor vs private constructor
+  - public ClassName(...){} // public constructor
+  - private ClassName(...){} // private constructor
+- public static ClassName methodName(...) {return new ClassName(...)} // use public static method to call the private constructor to create object
+
+- instance method: public returnType method(...){} // common practice, have this. keyword
+
+}
+----
 
 ***
 ## Week-3 Day-3 20240821
+
+- StringBuilder
+  ````java
+  StringBuilder sb = new StringBuilder(""); // String sb = "";
+  sb.append()
+  ````
+
+- Constant -> just `public`, no need `private`
+  - static final -> should be public
+  - final
+
+// VIP
+- 4 key variables:
+  - static final (CONSTANT)
+  - static (belong to Class, not object)
+  - final (belongs to object, cannot be changed)
+  - instance variable (non-static, not final, common concept)
+- static method
+// VIP
+
+- new Object[0]; // !!! initialize empty array
+
+- .toSting()
+
+- StringBuilder()
+- System.currentTimeMillis()
+
+
+
 
 
 ***

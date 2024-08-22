@@ -6,22 +6,37 @@ public class Suit {
   public static final int DIAMOND = 1;
   public static final int CLUB = 2;
   public static final int HEART = 3;
-  public static final int SPade = 4;
+  public static final int SPADE = 4;
 
   private int value;
-  private String name;
 
-  public Suit(int value, String name) {
+  private Suit(int value) {
     this.value = value;
-    this.name = name;
   }
+
+  public static Suit valueOf(int value){
+    return new Suit(value);
+  }
+
+  public static Suit ofDiamond(){
+    return new Suit(DIAMOND);
+  }
+
+  public static Suit ofClub(){
+    return new Suit(CLUB);
+  }
+
+  public static Suit ofHeart(){
+    return new Suit(HEART);
+  }
+
+  public static Suit ofSpade(){
+    return new Suit(SPADE);
+  }
+
 
   public int getValue() {
     return this.value;
-  }
-
-  public String getName() {
-    return this.name;
   }
 
   public int compareTo(Suit suit) {
@@ -29,7 +44,6 @@ public class Suit {
       return 0;
     }
     return this.value > suit.getValue() ? 1 : -1;
-
   }
 
   public boolean isDiamond() {
@@ -46,6 +60,12 @@ public class Suit {
 
   public boolean isSpade() {
     return this.value == SPADE;
+  }
+
+  public String toString() {
+    return "Suit(" //
+        + "value=" + this.value //
+        + ")";
   }
 
   public static void main(String[] args) {
