@@ -65,14 +65,51 @@ public class DemoBigDecimal {
         .println(BigDecimal.valueOf(3.445).setScale(2, RoundingMode.HALF_UP)); // 3.45
 
     // equals()
-    System.out.println(BigDecimal.valueOf(10L).equals(BigDecimal.valueOf(10.0))); // false
-    System.out.println(BigDecimal.valueOf(10.0).equals(BigDecimal.valueOf(10.0))); // true
-    System.out.println(BigDecimal.valueOf(10L).doubleValue()==BigDecimal.valueOf(10.0).doubleValue()); // true
+    System.out
+        .println(BigDecimal.valueOf(10L).equals(BigDecimal.valueOf(10.0))); // false
+    System.out
+        .println(BigDecimal.valueOf(10.0).equals(BigDecimal.valueOf(10.0))); // true
+    System.out.println(BigDecimal.valueOf(10L).doubleValue() == BigDecimal
+        .valueOf(10.0).doubleValue()); // true
 
     // compareTo()
-    System.out.println(BigDecimal.valueOf(10L).compareTo(BigDecimal.valueOf(10.0))); // 0
-    System.out.println(BigDecimal.valueOf(11).compareTo(BigDecimal.valueOf(10.0))); // 1
-    System.out.println(BigDecimal.valueOf(9).compareTo(BigDecimal.valueOf(10.0))); // -1
+    System.out
+        .println(BigDecimal.valueOf(10L).compareTo(BigDecimal.valueOf(10.0))); // 0
+    System.out
+        .println(BigDecimal.valueOf(11).compareTo(BigDecimal.valueOf(10.0))); // 1
+    System.out
+        .println(BigDecimal.valueOf(9).compareTo(BigDecimal.valueOf(10.0))); // -1
+
+    // new BigDecimal
+    double d1 = new BigDecimal("0.1").add(new BigDecimal("0.2")).doubleValue();
+    System.out.println(d1); // 0.3
+
+    double d2 = new BigDecimal(0.1).add(new BigDecimal(0.2)).doubleValue();
+    System.out.println(d2); // 0.30000000000000004
+
+    double d3 =
+        BigDecimal.valueOf(0.1f).add(BigDecimal.valueOf(0.2f)).doubleValue();
+    System.out.println(d3); // 0.30000000447034836
+
+    // !!!!!
+    // float (0.1f) -> double (0.1d)
+    // problem
+    double d4 =
+        BigDecimal.valueOf(0.1f).add(BigDecimal.valueOf(0.2f)).doubleValue(); // 0.3.....
+    float f1 = 0.1f;
+    float f2 = 0.2f;
+    // !!!!!
+    System.out.println("float+float=" + new BigDecimal(String.valueOf(f1))
+        .add(new BigDecimal(String.valueOf(f2)))); // 0.3
+
+    // BigDecimal.valueOf("0.1"); // error
+    // 0.1d -> 64-bit
+    System.out.println(BigDecimal.valueOf(0.1d));
+    System.out.println(BigDecimal.valueOf(0.2d));
+    // 0.1f -> 32-bit
+    // 0.1f -> 0.1d
+    System.out.println(BigDecimal.valueOf(0.1f));
+
 
 
   } // end of main()

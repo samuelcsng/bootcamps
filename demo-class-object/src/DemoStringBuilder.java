@@ -31,16 +31,21 @@ public class DemoStringBuilder {
       // s1 += "a";
     }
     long afterTime = System.currentTimeMillis(); // ms
-    System.out.println(afterTime - startTime);
+    System.out.println(afterTime - startTime); // 319 ms
 
-    startTime = System.currentTimeMillis();
+    startTime = System.currentTimeMillis(); // ms
     StringBuilder sb2 = new StringBuilder("");
     for (int i = 0; i < 10000; i++) {
       sb2.append("a");
     }
-    afterTime = System.currentTimeMillis();
-    System.out.println(afterTime - startTime);
+    afterTime = System.currentTimeMillis(); // ms
+    System.out.println(afterTime - startTime); // 3 ms
 
+    String s2 = "hellolllollklll";
+    String s3 = s2.replace("lll", "x"); // slow
+    System.out.println(s3);
+    
+    System.out.println(s2.indexOf("lll")); // 5
 
   } // end of main()
 }

@@ -335,7 +335,7 @@ public class ClassName {
 - 4 key variables:
   - static final (CONSTANT)
   - static (belong to Class, not object)
-  - final (belongs to object, cannot be changed)
+  - final (w/o `static`, belongs to object(not Class->use this._), cannot be changed)
   - instance variable (non-static, not final, common concept)
 - static method
 // VIP
@@ -353,6 +353,31 @@ public class ClassName {
 
 ***
 ## Week-3 Day-4 20240822
+
+- Considerations before coding:
+  - velocity(coding, running and ...)
+  - readability
+  - flexibility
+  - debug
+
+- BigDecimal
+  - use BigDecimal.valueOf(0.1)
+  - new BigDecimal("0.1")
+
+- LocalDate
+  - .equals(DayOfWeek(5))
+
+- LocalDate, String, BigDecimal -> immutable
+  -// "Immutable" -> the object has no method to revise itself
+
+- Pool - Internal Cache
+  - for String, Integer(), ...
+
+- scanner.nextline();
+
+
+
+
 
 
 ***
