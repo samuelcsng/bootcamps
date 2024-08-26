@@ -382,3 +382,18 @@ public class ClassName {
 
 ***
 ## Week-3 Day-5 20240823
+
+- new README.md file
+
+- HackMD usage (cap graphics)
+- vs code extension install "Markdown All in One"
+
+- enum
+  - public enum ClassName{}
+  - enum.values() method
+
+- by entering main()
+    // Load classes to Memory
+    // enum -> create objects for enum
+    // static/ static final
+    // start to read your code in main method

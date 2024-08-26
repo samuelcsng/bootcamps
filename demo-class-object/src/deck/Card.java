@@ -7,9 +7,9 @@ public class Card {
 
   // String -> good presentation, built-in equals() & compareTo()
   private Rank rank;
-  private Suit suit;
+  private Suit2 suit;
 
-  public Card(Rank rank, Suit suit) {
+  public Card(Rank rank, Suit2 suit) {
     this.rank = rank;
     this.suit = suit;
   }
@@ -19,8 +19,14 @@ public class Card {
     return this.rank;
   }
 
-  public Suit getSuit() {
+  public Suit2 getSuit() {
     return this.suit;
+  }
+
+  public boolean equals(Card card) {
+    // this vs card
+    return this.rank.equals(card.getRank()) //
+    && this.suit == card.getSuit();
   }
 
   public int compareTo(Card card) {
@@ -28,9 +34,9 @@ public class Card {
     // this (address) vs card (address)
     int rankResult = this.rank.compareTo(card.getRank());
     if (rankResult == 0) {
-      if (this.suit.compareTo(card.getSuit()) == 0) { //
+      if (this.suit.compareTo(card.getSuit()) == 0) { // should use compare()
         return 0;
-      } else if (this.suit.compareTo(card.getSuit()) > 0) { //
+      } else if (this.suit.compareTo(card.getSuit()) > 0) { // !!! should use compare()
         return 1;
       } else {
         return -1;
@@ -114,16 +120,19 @@ public class Card {
   public String toString() {
     return "Card(" //
         + "rank=" + this.rank //
-        + ",suit=" + this.suit
-        + ")";
+        + ",suit=" + this.suit + ")";
   }
 
   public static void main(String[] args) {
     // valueOf(''),
-    Card c1 = new Card(Rank.ofACE(), Suit.ofDiamond());
-    Card c2 = new Card(Rank.ofACE(), Suit.ofClub());
-    Card c3 = new Card(Rank.ofJACK(), Suit.ofDiamond());
-    Card c4 = new Card(Rank.ofJACK(), Suit.ofDiamond());
+    // Card c1 = new Card(Rank.ofACE(), Suit.ofDiamond());
+    // Card c2 = new Card(Rank.ofACE(), Suit.ofClub());
+    // Card c3 = new Card(Rank.ofJACK(), Suit.ofDiamond());
+    // Card c4 = new Card(Rank.ofJACK(), Suit.ofDiamond());
+    Card c1 = new Card(Rank.ofACE(), Suit2.DIAMOND);
+    Card c2 = new Card(Rank.ofACE(), Suit2.CLUB);
+    Card c3 = new Card(Rank.ofJACK(), Suit2.DIAMOND);
+    Card c4 = new Card(Rank.ofJACK(), Suit2.DIAMOND);
 
     System.out.println(c2.compareTo(c1)); // 1
     System.out.println(c1.compareTo(c2)); // -1
