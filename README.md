@@ -417,6 +417,45 @@ public class ClassName {
 
 ***
 ## Week-4 Day-2 20240827
+
+- inheritance
+  - child class call super() implicitly
+
+- "pass by reference"
+  - passing a copy of object address
+  - !!! In the Internet, Java always "Pass by value". Why???
+
+- For "extends"
+  - Attributes in Parent
+    - if it is private, CANNOT inherit
+    - if it is public, "this" is something like "alias", pointing back to "super"
+  - Constructors in Parent
+    - Even it is public, CANNOT inherit
+    - Instead, child class calls parent constructor by "super" 
+  - Methods
+    - if it is public, "Refer" by "this"
+    - if it is private, child class CANNOT access by "super"
+
+- @Override
+  - Override -> Same Method Signature
+
+- Inheritance
+  - Parent Class can hold its own attribute
+  - Parent Class itself can create object
+
+- abstract class
+  - abstract method
+  - vs concrete class (use extends)
+  - abstract class extends another abstract class
+
+- Top-most Class
+  - toString()
+  - equals(Object object)
+  - hashCode()
+
+
+
+
 ***
 ## Week-4 Day-3 20240828
 ***
