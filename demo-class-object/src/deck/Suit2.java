@@ -1,5 +1,7 @@
 package deck;
 
+import java.util.Arrays;
+
 public enum Suit2 {
   // create enum objects
   // DIAMOND, // call empty constructor
@@ -78,6 +80,7 @@ public enum Suit2 {
     System.out.println(Suit2.CLUB.ordinal());
     System.out.println(Suit2.HEART.ordinal());
 
+    System.out.println(Suit2.CLUB.getValue()); // 2
 
   } // end of main()
 

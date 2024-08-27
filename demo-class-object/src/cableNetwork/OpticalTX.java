@@ -1,18 +1,20 @@
 package cableNetwork;
 
 public class OpticalTX {
+  // instance variable
   private int machineId;
   private Port[] ports;
-  
+  // private double totalPowerOutput;
+  private double inputPower;
+
+  // constructor
   public OpticalTX(int machineId, Port[] ports, double inputPower) {
     this.machineId = machineId;
     this.ports = ports;
     this.inputPower = inputPower;
   }
 
-  // private double totalPowerOutput;
-  private double inputPower;
-
+  // instance method
   public double machinePowerOutput() {
     double totalPortOutput = 0; // BigDecimal???
     for (int i = 0; i < ports.length; i++) {

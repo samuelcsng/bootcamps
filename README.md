@@ -397,3 +397,29 @@ public class ClassName {
     // enum -> create objects for enum
     // static/ static final
     // start to read your code in main method
+
+
+
+***
+## Week-4 Day-1 20240826
+
+- int is NOT SUITABLE for switch design...
+
+- enum
+  - prefer to use "==", instead of .equals()
+  - .valueOf()
+  - .getValue()
+
+- inheritance
+  - extends
+  - super
+
+
+***
+## Week-4 Day-2 20240827
+***
+## Week-4 Day-3 20240828
+***
+## Week-4 Day-4 20240829
+***
+## Week-4 Day-5 20240830
