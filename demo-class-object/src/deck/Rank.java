@@ -19,6 +19,10 @@ public class Rank {
 
   private char value;
 
+  public Rank() {
+    
+  }
+
   private Rank(char value) {
     this.value = value;
   }
@@ -80,7 +84,7 @@ public class Rank {
   }
 
   public boolean equals(Rank rank) {
-    return this.value = rank.getValue();
+    return this.value == rank.getValue();
   }
 
   public int compareTo(Rank rank) {

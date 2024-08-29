@@ -2,7 +2,7 @@ package shape;
 
 // 2D
 // public class Shape {
-public abstract class Shape extends {
+public abstract class Shape {
   private Color color; // enum object default value -> null
 
   public Shape() {
@@ -25,8 +25,12 @@ public abstract class Shape extends {
   // 1. we can create abstract method (without implementation)
   // 2. cannot create object for Abstract Class (only extends)
   // 3. Abstract class can still hold its own attributes
-  // 4. The constructor in abstract class is for child class to invoke
-  public abstract double area();
+  // 4. The constructor in abstract class is for child class to invoke/call
+  // 5. by default all abstract method must be public
+
+  // public abstract double area();
+
+  abstract double area();
 
   public static void main(String[] args) {
     // Shape shape = new Shape();
