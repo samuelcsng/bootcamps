@@ -489,5 +489,46 @@ public class ClassName {
 
 ***
 ## Week-4 Day-4 20240829
+
+- Child upCast = parent;
+- think: downcast parent == child ???
+
+- interface
+  - "final" class cannot be extended
+  - "final" class method cannot be overriden
+
+- JAVA: (APIE)
+  - Abstraction (Interface)
+  - Polymorphism
+  - Inheritance
+  - Encapsulation
+
+- Interface (100% Abstraction/Contract) vs Inheritance (extends Parent Class)
+  - Differences:
+    - No Attribute vs have attribute(s)
+    - No Constructor vs Have Constructor(s)
+    - Implements >=1 Interfaces vs Extends ONLY 1 Parent Class
+    - Methods are all abstract (before Java 8, have Default after Java 8) vs Contains both abstract and concrete method
+    - Not support static variable vs Support ...
+  - Same:
+    - Support Static Final Variable
+    - Support Static methods (After Java 8)
+    - Default/Inherit instance method (After Java 8)
+
+- Interface vs Abstract Class
+- vip: Interface Name's meaning best to be have an ADJECTIVE meaning(for abstract feeling), not NOUN (which has wrong feeling of an object or concrete class)
+
+- enum
+  - is IMPLICITLY final
+  - cannot extends enum
+
+- interface extends 
+
+- String, StringBuilder, StringBox implements CharSequence interface
+- 6 primitives(Byte, Short, Integer, Long, Float, Double) implements Number interface
+
+
+
+
 ***
 ## Week-4 Day-5 20240830
