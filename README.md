@@ -532,3 +532,30 @@ public class ClassName {
 
 ***
 ## Week-4 Day-5 20240830
+
+- the item following "new" MUST BE "constructor"
+
+- ArrayList<Number> is not the parent of ArrayList<Integer>
+  - ArrayList<Number> integers3 = new ArrayList<Integer>(); // compile error
+- but Number is the parent of Integer
+- .isEmpty() vs .size()==0 
+- for loop in Array vs for loop in ArrayList
+
+- always override .toString() .equals() .hashCode()
+
+- remove by index .remove(idx) return object
+- remove by object local modification + return boolean
+
+- cannot use ArrayList together with primitive
+  - but can use with Wrapper class
+
+- Interface: List.class
+  - List is the interface of ArrayList
+
+- conversion to Arrays
+
+- Arrays.asList() -> return List object
+  - Disadvantage:
+    - you cannot perform write operation
+    - read operation is ok
+    
