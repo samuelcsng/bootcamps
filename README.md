@@ -559,3 +559,76 @@ public class ClassName {
     - you cannot perform write operation
     - read operation is ok
     
+
+
+
+***
+## Week-5 Day-1 20240902
+
+- *** ArrayList.add() method
+  - a new array will be created and the reference is redirected(can cause memory overflow) 
+  - can return boolean false(mostly true) (can cause problem)
+  - reference of ArrayList object has no relationship with the address of the array within it.
+
+- Arrays.asList(...)
+  - easy common usage but cannot write
+
+- HashSet<>()
+  - the underlying data is NOT array
+  - remove duplicate
+
+- LinkedList<>
+  - O(1) -> Constant time -> add element at head
+  - O(n) -> add element at tail
+  - LinkedList.class also store the tail address as an attribute -> add element at tail also O(1)
+  - LinkedList.get() vs ArrayList.get()
+  - Polymorphism
+    - List<Integer> integerLinkedList = new LinkedList<>()
+    - List<Integer> integer = new ArrayList<>()
+    - Compile Time(Static) polymorphism (focus on left side)
+    - Run Time(Dynamic) polymorphism (focus on right side)
+  - self-build LinkedList<>()
+
+- ArrayList vs LinkedList
+  - Same:
+    1. Implement List Interface: add(), remove(), size(), get() ...
+    2. With Ordering
+
+  - Difference:
+    1. Polymorphism -> different implementation for same method(almost all methods)
+    2. Performance: Add/Remove head/tail element -> LinkedList perform better
+      - if we know the exact index of position for searching, ArrayList will be better
+
+- ArrayList (array) vs HashSet (hash + array)
+  - Same:
+    1. (vip) HashSet has NO ordering
+    2. Add/Remove -> array -> re-create array object
+  - Difference:
+    1. (vip) Polymorphism -> different implementation -> add() -> return false if duplicated
+    2. Searching by hash code to find out duplicated
+
+- LinkedList vs Queue vs Deque vs List
+
+- VIP: in OOP, if not array, it must be LinkedList
+
+
+
+
+
+***
+## Week-5 Day-2 20240903
+
+
+
+***
+## Week-5 Day-3 20240904
+
+
+
+***
+## Week-5 Day-4 20240905
+
+
+
+***
+## Week-5 Day-5 20240906
