@@ -609,7 +609,8 @@ public class ClassName {
 
 - LinkedList vs Queue vs Deque vs List
 
-- VIP: in OOP, if not array, it must be LinkedList
+- VIP: 
+  - in OOP, if not array, it must be LinkedList
 
 
 
@@ -618,6 +619,57 @@ public class ClassName {
 ***
 ## Week-5 Day-2 20240903
 
+- Java Doc
+  - /**
+  - *
+  - */
+
+- Queue
+  - .addLast
+  - .removeFirst
+  - FIFO
+
+- choices of Interface and the implementation separately
+  1. Queue -> LinkedList or ArrayDeque
+  2. Deque -> LinkedList or ArrayDeque
+  3. List  -> LinkedList or ArrayList
+
+- Choose between Queue, Deque, List
+  1. All the above have ordering
+  2. Queue/Deque cannot access the middle element DIRECTLY
+  3. Deque has addFirst & removeLast
+  4. Queue/Deque for "consumption", use .poll()
+
+- queue.poll()
+  - similar to "remove"
+
+- queue.peek()
+  - look up the head element
+
+- for-each - consumption
+  - while-loop Queue
+  - while (!queue.isEmpty()){
+      element = queue.poll();
+      // code using element
+  }
+
+- Design idea: need to retain the data?
+
+- PriorityQueue(PQ)
+  - NOT first come first serve
+  - natural ordering of the elements
+  - concerning on ordering
+  - !!! The algorithm pick the first element at poll(), but not exactly a sorting
+
+- Comparable 
+  - implements Comparable<>
+    - "implements Interface" implies the object of this class must contain compareTo() method at "compile time"
+    - The method/object has to ensure
+  - @Override compareTo()
+  - Disadvantages
+    1. You cannot define 2 sorting formula at the same time.
+    2. The compareTo formula is for Box.class
+  - Generic ???
 
 
 ***
