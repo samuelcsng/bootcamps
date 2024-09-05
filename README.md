@@ -675,6 +675,60 @@ public class ClassName {
 ***
 ## Week-5 Day-3 20240904
 
+- Class implementation of the interface Comparable<> override the compareTo():
+  ````java
+  class CName implements Comparable<CName> {
+    @Override
+    public int compareTo(CName cName){}
+  }
+  ````
+
+- Class implementation of the interface Comparator<> override the compare():
+  ````java
+  class CName implements Comparator<CName> {
+    @Override
+    public int compare(CName cName1, CName cName2){}
+  }
+  ````
+
+- HashMap
+  ````java
+    Map<key,value> map = new HashMap<>();
+  ````
+  - .put(key, value) -> if same key, overwrite old value
+  - .get(key)
+  - .size()
+  - for-each
+    ````java
+    for (Map.Entry<key, value> entry: mapName.entrySet()){
+      // entry.getKey()
+      // entry.getValue()
+    }
+    ````
+  - .remove(key), .remove(key, value)
+  - .entrySet()
+  - .keySet()
+  - .values()
+  - .clear() // clear all entries -> .size() = 0
+  - .retain()
+
+- HashMap vs List(ArrayList, LinkedList)
+  1. HashMap has no ordering
+  2. HashMap get value by key (any type), List get value by index (int)
+  3. Key cannot be duplicated, List may contain duplicated value
+
+- !!! How to identify the key is duplicated?
+  - the implementation of put() method
+  - Note on the overriding of the .equals() and .hashCode()
+
+- deque
+  - pop(), push(), addFirst(), remove(), removeFirst() -> head element
+  - add(), addLast(), removeLast() -> tail element
+  - peek(), peekFirst return head element
+  - peekLast() return tail element
+  - poll()
+
+
 
 
 ***
