@@ -734,7 +734,31 @@ public class ClassName {
 ***
 ## Week-5 Day-4 20240905
 
+- HashMap vs List
+  - HashMap.get() by key -> for loop list, if value = key, return object
+    - HashMap<String, String> urlMap(i.e. "AAPL", "www.apple.com")
+    - If we want to store more info about the "key" -> HashMap<String, Company>
+    - Retain key object is wrapper class or String (equals(), hashCode() is ready)
+  - HashMap<Customer, List<Transaction>>
+    - If key is customer object, be careful of .equals() and .hashCode() -> put(), get()
 
+- Interface Collection only??? contain only Static methods
+
+- Big-O Notation
+  - mergesort
+    - Collection.sort()
+    - Array.sort()
+
+- Recursion
+  - base case
+  - Advantages of Recursion
+    1. Better Space Complexity
+
+  - Typical Scenario that we need Recursion
+    1. DFS (Depth First Search)
+
+- Generic
+  - List is similar to List<Object>
 
 ***
 ## Week-5 Day-5 20240906
