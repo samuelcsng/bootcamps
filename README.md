@@ -535,11 +535,12 @@ public class ClassName {
 
 - the item following "new" MUST BE "constructor"
 
-- ArrayList<Number> is not the parent of ArrayList<Integer>
-  - ArrayList<Number> integers3 = new ArrayList<Integer>(); // compile error
-- but Number is the parent of Integer
-- .isEmpty() vs .size()==0 
-- for loop in Array vs for loop in ArrayList
+- ArrayList
+  - Number is the parent of Integer
+  - BUT: ArrayList<Number> is not the parent of ArrayList<Integer>
+    - ArrayList<Number> integers3 = new ArrayList<Integer>(); // compile error
+  - .isEmpty() vs .size()==0 
+  - for loop in Array vs for loop in ArrayList
 
 - always override .toString() .equals() .hashCode()
 
