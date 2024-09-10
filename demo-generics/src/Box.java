@@ -18,6 +18,7 @@ public class Box<T> {
   public static void main(String[] args) {
     // T -> String
     Box<String> stringBox = new Box<>();
+    StringBox StringBox2 = new StringBox<String>();
 
     // T -> Integer
     Box<Integer> integerBox = new Box<>();
@@ -27,7 +28,7 @@ public class Box<T> {
     // Map<K, V>
     Map<String, Integer> integerMap = new HashMap<>();
 
-    // List is same as List<Object>
+    // List is similar to List<Object>
     List list = new ArrayList<String>();
     list.add("abc");
     list.add(123);

@@ -763,3 +763,58 @@ public class ClassName {
 
 ***
 ## Week-5 Day-5 20240906
+- !!!Typhoon!!!
+
+
+
+
+***
+## Week-6 Day-1 20240909
+
+- empty constructor
+  - if with attributes of List<>(or ...), still need to initiate the attributes
+  - eg. ```this.accounts = new ArrayList<>();```
+
+- Java 1.5 (real Generics)
+  - define the type of List "at compile time"
+  - At compile time, Java confirm the type and hence is safe to use related methods afterward
+
+- Define Type range
+  - <T extends ...>
+  - <T extends Interface>
+  - <T extends Comparable<? super T>>
+    - "? super T" -> any parent class of T or T itself
+    - Generics extends Generics (Generic of Generic)
+  - < T extends Comparable<T>> 
+    - smaller range of T
+  
+- Generics
+  - Generic Type can be written in class/object level
+    - public class Box<T>
+    - the type of attribute be T
+    - instance method can be generic (public T getValue())
+    - At compile time, the generic type T must be aligned between Class, attributes and instance method
+    - At run time, you have to define the exact type of T
+  - Generic Type can be written in `static` method level
+    - You have to define the range of generic type in the method signature
+    - public static <T> Box<T> createBox(T value)
+  - T for instance method vs T for static method
+  - `Polymorphism` does not apply to Generic
+  - 
+
+- <? extends Shape> === <? super Shape>
+
+- try{}catch(){}
+- throw new Exception() // Exception object
+
+***
+## Week-6 Day-2 20240910
+
+***
+## Week-6 Day-3 20240911
+
+***
+## Week-6 Day-4 20240912
+
+***
+## Week-6 Day-5 2024090613
