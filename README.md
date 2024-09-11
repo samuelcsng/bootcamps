@@ -810,6 +810,40 @@ public class ClassName {
 ***
 ## Week-6 Day-2 20240910
 
+- Exception
+  - What is unchecked exception?
+    - You don't have to handle the exception by "try catch" or "rethrow"
+    - You can ignore the potential exception scenario (refer to ExceptionChainExample1.java)
+    - You can recover as well.
+  - What is checked exception?
+    - Create Custom class (extend Exception.class)
+    - You have to handle the exception by 2 ways:
+      - "Try Catch"
+      - "re-throw by method signature"
+    - Refer to BusinessException.java
+  - Unchecked Exception (Run-time Exception)
+    - / by zero, NPE, IAE, IndexOutOfBound, etc. (Likely Memory Limitation)
+  - Checked Exception (Compile-time Exception)
+    - IOException (DB login, Server service unavailable, File Access, File Not Found, etc)
+    - Custom Exception
+  - Why do we need Exception?
+    - The world without Exception, you can only use "return" for method communication
+      - return -> Happy Path
+    - The world with Exception, you can both use "return" and "throw"
+  - "catch" can be multiple code block, similar to "else if"
+  - "catch" has Parent and Polymorphism concepts
+
+- Java 17
+  - framework(spring, spring boot) closely related
+- commonly Java 11 to 17
+- Java 8 (year 2014)
+- Java 5 (with Generics added)
+
+- Nested Class
+
+
+
+
 ***
 ## Week-6 Day-3 20240911
 
