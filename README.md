@@ -847,6 +847,38 @@ public class ClassName {
 ***
 ## Week-6 Day-3 20240911
 
+- Builder Pattern
+  - Advantages/Functionality of Builder Pattern:
+    1. Serve different pattern of constructors.
+    2. Builder method name assists the value assignment in case there are lots of attributes.
+    3. We can disable/private (encapsulate) constructor of Outer Class
+  - *** think about usage of return this in instance method
+
+- Java terms:
+    // Class
+    // Object/instance
+    // instance method
+    // static method
+    // interface
+    // implements
+    // Parent Class
+    // Child Class
+    // extends
+    // Polymorphism
+
+- useful links
+  - csdn.net
+  - bytebytego.com
+
+- Factory Pattern
+  - open-close coding style
+  - abstract class and interface
+  - enum + switch
+
+- Lambda Expression
+  - "Lambda Expression" is for creating object without class, given that the interface is Functional interface
+
+
 ***
 ## Week-6 Day-4 20240912
 

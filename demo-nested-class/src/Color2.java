@@ -1,3 +1,3 @@
-public class Color2 {
-  
+public enum Color2 {
+  RED, GREEN, BLUE,;
 }

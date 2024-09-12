@@ -1,12 +1,15 @@
+package uncheckedexception;
+
 public class StringIndexOutOfBound {
   public static void main(String[] args) {
     // char[]
+    int idx = 3;
     try {
-      "abc".charAt(3);
+      "abc".charAt(idx);
       // substring(startIdx, endIdx)
-      // 
     } catch (StringIndexOutOfBoundsException e) {
       System.out.println("idx is out of bound.");
     }
+
   }
 }

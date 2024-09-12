@@ -1,3 +1,4 @@
+package uncheckedexception;
 public class IndexOutOfBound {
   public static void main(String[] args) {
     int[] arr = new int[] {3, 1, 2};
@@ -7,8 +8,5 @@ public class IndexOutOfBound {
     } catch (ArrayIndexOutOfBoundsException e) {
       System.out.println("idx is out of the range of array. Please input again.");
     }
-
-
-    
-  } // main()
+  }
 }

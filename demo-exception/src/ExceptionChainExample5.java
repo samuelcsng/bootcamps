@@ -1,12 +1,12 @@
 public class ExceptionChainExample5 {
-  // !!!! No Exception
+  // !!!! Convert Exception
   public static void main(String[] args) {
     try {
-      method2(10, 0);
+      method1(10, 0); //
     } catch (RuntimeException e) {
       System.out.println("runtime exception ...");
     }
-  } // main()
+  }
 
   public static int method1(int x, int y) {
     try {

@@ -1,6 +1,7 @@
+package uncheckedexception;
 public class NullPointer {
   public static void main(String[] args) {
-    // !!! Null Pointer Problem should never be "try/catch"
+    // !!!! Null Pointer Problem should never be "try/ catch"
     String s = null;
 
     try {
@@ -15,6 +16,4 @@ public class NullPointer {
     }
 
   }
-
-
 }

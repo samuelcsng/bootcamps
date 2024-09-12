@@ -1,5 +1,6 @@
+package uncheckedexception;
 public enum Color {
-  RED('R'), GREEN('G'), BLUE('G'),;
+  RED('R'), GREEN('G'), BLUE('B'),;
 
   private char value;
 
@@ -21,9 +22,8 @@ public enum Color {
   }
 
   public static String concat(String s1, String s2) {
-    if (s1 != null) {
+    if (s1 != null)
       return s1.concat(s2);
-    }
     throw new NullPointerException("s1 is null. NPE.");
   }
 
@@ -31,17 +31,16 @@ public enum Color {
     try {
       Color.get('r');
     } catch (IllegalArgumentException e) {
-      System.out.println(e.getMessage()); // char value is invalid. value=r
+      System.out.println(e.getMessage()); // char value is invalid. value=r.
     }
 
     // Meaningless
     try {
       concat(null, "abc");
-    } catch (IllegalArgumentException e) {
+    } catch (NullPointerException e) {
       System.out.println(e.getMessage());
     }
 
+  }
 
-
-  } // main()
 }
