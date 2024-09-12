@@ -882,5 +882,53 @@ public class ClassName {
 ***
 ## Week-6 Day-4 20240912
 
+- Lambda
+  - Runtime Formula (differs to Class instance method & static method)
+  - @FunctionalInterface
+  - Function interface
+  - BiFunction interface
+  - self build FunctionalInterface
+  - Consumer.class
+  - BiConsumer.class
+  - Supplier interface
+  - Predicate
+  - BiPredicate
+  - apply() vs accept() vs get() vs test()
+  - UnaryOperator
+  - BinaryOperator
+  - Applying Lambda
+    - List.foreach() (Java 8) -> Consumer.class
+    - Map.ComputeIfAbsent()
+    - Map.merge()
+    - Predicate.and()
+    - Predicate.or()
+
+  - Stream
+    - Steam.of()
+    - Stream.forEach()
+    - After Java 8, we have Stream.class, which contains lots of powerful method/ functionality
+    - Convert List to Stream
+      - stream()
+    - Convert Stream to List
+      - collect(Collections.toList())
+    - Stream Object -> filter() + collect()
+    - Stream.map()
+    - filter().map()
+    - map().filter()
+    - .sum()
+    - .count()
+    - .mapToInt()
+    - Stream Object -> mapToInt() -> IntStream object -> sum()
+    - .max(), .min(), .average()
+    - IntStream -> distinct()
+  - Collect to Set
+  - Array to IntStream to Stream<Integer> to Set<Integer>
+
+
+
+
+
+
+
 ***
 ## Week-6 Day-5 2024090613

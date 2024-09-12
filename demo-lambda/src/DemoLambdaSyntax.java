@@ -1,4 +1,4 @@
-public class DemoLambda {
+public class DemoLambdaSyntax {
   public static void main(String[] args) {
     Superman superman = new Superman();
     superman.fly();
