@@ -926,9 +926,46 @@ public class ClassName {
 
 
 
-
-
-
-
 ***
-## Week-6 Day-5 2024090613
+## Week-6 Day-5 20240913
+
+- Stream
+
+- Arrays.asList()
+  - Mutable but fixed size
+  - No add & remove, but set is OK
+- List.of()
+  - Immutable
+  - Java 9 (No add, remove, set)
+
+- OptionalInt
+
+- .flatMap()
+
+- array to stream()
+  - Arrays.stream()
+  - Arrays.stream(array).boxed()...
+  - int[] -> List<Integer>
+  - stream() + boxed
+
+- Optional
+  - .findAny()
+  - .findFirst()
+  - .isPresent()
+  - .ifPresent()
+  - Optional<String>, Optional.of("abc")
+  - Optional.ofNullable(null)
+  - to resolve Optional of value
+    - isPresent() -> get()
+    - ifPresent()
+    - .orElse()
+    - .orElseThrow()
+    - .orElseGet()
+  - Optional.empty()
+
+- !!! Use cases for Optional<T>
+  - Good:
+  1. Optional should be used for return type ONLY!!! (Similar to throw Checked Exception)
+  - Bad:
+  2. Never use Optional in method parameters
+  3. Never use Optional as type of class attribute, because it does not support Serialization
