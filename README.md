@@ -969,3 +969,58 @@ public class ClassName {
   - Bad:
   2. Never use Optional in method parameters
   3. Never use Optional as type of class attribute, because it does not support Serialization
+
+
+
+***
+## Week-7 Day-1 20240916
+
+- Method Reference
+  - with Lambda Expression
+  - with method reference
+    - ONLY for one input or one output
+    - NOT one input AND one output
+
+- Type Inference
+
+- Switch Expression
+  - ~Java 14
+
+- Record
+
+- Thread
+  - Runnable interface
+  - Thread implements Runnable
+  - Process vs Thread
+  - Thread require Runnable (task) as parameter
+  - Thread.start() vs Thread.run()
+  - need to think if different tasks share the same resources
+  - Thread.join()
+  - write-write and write-read operations
+    - counter++ -> non-atomic
+    - append() -> non-atomic
+      - StringBuilder().append() vs StringBuffer().append()
+      - Appendable
+
+
+
+***
+## Week-7 Day-2 20240917
+
+
+
+***
+## Week-7 Day-3 20240918
+- Holiday: Mid-Autumn Festival
+
+
+
+***
+## Week-7 Day-4 20240919
+
+
+
+***
+## Week-7 Day-5 20240920
+
+
