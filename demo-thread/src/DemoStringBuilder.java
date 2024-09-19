@@ -1,7 +1,8 @@
 import java.io.IOException;
 
 public class DemoStringBuilder {
-  private static Appendable sb = new StringBuilder("");
+  // private static Appendable sb = new StringBuilder("");
+  private static Appendable sb = new StringBuffer("");
   // append() -> non-atomic
 
   // Solution: StringBuffer
@@ -25,7 +26,7 @@ public class DemoStringBuilder {
     long before = System.currentTimeMillis();
     
     Runnable task1 = () -> {
-      for (int i = 0; i < 1000; i++) {
+      for (int i = 0; i < 10_000_000; i++) {
         append(sb, "1");
       }
       // sleep(1000); // 1 second
@@ -34,7 +35,7 @@ public class DemoStringBuilder {
     thread1.start(); // run()
 
     Runnable task2 = () -> {
-      for (int i = 0; i < 1000; i++) {
+      for (int i = 0; i < 10_000_000; i++) {
         append(sb, "2");
       }
     };

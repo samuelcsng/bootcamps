@@ -1007,17 +1007,33 @@ public class ClassName {
 ***
 ## Week-7 Day-2 20240917
 
+- Thread
+  - synchronized
+  - AtomicInteger
+
+- DeadLock
+
+- Thread-Safe by Atomic Operation
+
+- Vector()
+- Hashtable()
+- differences of Hashtable() and HashMap()
+  - 1. Not support null key
+  - 2. Not support null value
+
+- Collections.synchronizedMap() vs ConcurrectHashMap()
+- Collections.synchronizedList()
 
 
 ***
 ## Week-7 Day-3 20240918
-- Holiday: Mid-Autumn Festival
+- Holiday: Next Day of Mid-Autumn Festival
 
 
 
 ***
 ## Week-7 Day-4 20240919
-
+- DBMS + SQL
 
 
 ***
