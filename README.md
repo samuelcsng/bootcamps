@@ -1028,7 +1028,141 @@ public class ClassName {
 
 ***
 ## Week-7 Day-3 20240918
-- Holiday: Next Day of Mid-Autumn Festival
+### HOLIDAY:
+  - Next Day of Mid-Autumn Festival
+
+
+***
+## Week-7 Day-4 20240919
+### SQL
+
+
+***
+## Week-7 Day-5 20240920
+### SQL
+
+
+***
+## Week-8 Day-1 20240923
+### SQL
+
+
+***
+## Week-8 Day-2 20240924
+### SQL
+
+### JAVA
+#### week 9 Course Materials
+- Maven
+  - mvn + pom.xml
+  - maven CLI:
+    - mvn clean -> BUILD SUCCESS
+    - mvn compile
+    - mvn clean compile
+  - decompile
+
+
+
+
+***
+## Week-8 Day-3 20240925
+
+- Java version
+  - laptop JDK 17
+  - VScode Extension JDK -> laptop JDK
+  - laptop maven -> JDK 17
+  - maven project pom -> Java compiler 1.5
+
+- mvn clean + mvn compile
+- mvn clean compile
+- mvn test compile
+
+- Maven Cycle:
+  - mvn clean -> clear target folder
+  - mvn compile -> compile all java files under main folder (.java -> .class)
+  - mvn test compile -> Included "compile" step
+
+- https://mvnrepository.com
+- https://mvnrepository.com/repos
+
+- Library:
+  - 1. Implicitly import (JDK - java.lang), i.e. StringBuilder.class
+  - 2. Explicitly import (JDK - java.util, java.math), i.e. BigDecimal, ArrayList
+  - 3. External Library - Outside JDK (lombok), i.e. @Getter
+
+- When you initialize a mavin java project, it preloads JDK library under java.lang.
+
+- decompile
+
+- Lombok
+  - @Data
+    - Includes Getters, Setters, toString(), equals(), hashCode(), Constructor()
+  - @NonNull
+
+  - Class Level Annotation
+  - Attribute Level (Field) Annotation
+  - Parameter Level Annotation
+  - to generate exception checking
+
+  - @Value
+
+  - @ToString(exclude = {"...", "..."})
+  - @EqualsAndHashCode(exclude = "id")
+
+
+
+
+***
+## Week-8 Day-4 20240926
+
+- pom.xml (Project Object Model)
+  - <groupId>
+  - <artifactId>
+  - <version>
+  - <packaging>
+  - <dependency>
+  - <build>
+- mvn clean package
+  - .jar file
+- mvn clean install
+- .m2 folder
+  - .m2/repository/com/...
+- versioning idea
+  - in pom.xml
+    `<version>18.3.0</version>`
+- mvn clean
+- mvn compile (.java -> .class)
+- mvn test
+- mvn package (.class -> .jar)
+- mvn install
+- mvn deploy
+
+- Java Testing
+  - JUnit 4(before Java 8) vs JUnit 5 (= Junit Jupiter) (after Java 8)
+  - mvn clean install
+    - pass all test cases before compile successfully to .jar file
+  - @TestInstance(TestInstance.Lifecycle.PER_METHOD)
+  - @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+  - @BeforeAll
+    void init() {}
+  - @TestMethodOrder(OrderAnnotation.class)
+    - @Order(...)
+  - assertSame(), assertNotSame()
+  - assertThrows(), assertDoesNotThrows()
+  - assertTimeout()
+  
+
+    
+
+
+
+
+
+***
+## Week-8 Day-5 20240927
+
+
+
 
 
 

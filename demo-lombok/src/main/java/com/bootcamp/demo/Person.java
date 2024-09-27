@@ -1,14 +1,12 @@
 package com.bootcamp.demo;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 
-// Class level Annotation
-@Data // @ RequiredArgsConstructor
-// @AllArgsConstructor
+// 1. Class level Annotation
+@Data // @RequiredArgsConstructor
 public class Person {
-  // Annotation can be attribute level
+  // 2. Annotation can be attribute level
   @NonNull // runtime checking on Constructor + Setter
   private String name; // non-nullable
 
@@ -16,12 +14,9 @@ public class Person {
 
   public static void main(String[] args) {
     Person p = new Person("John");
-    System.out.println(p);
+    System.out.println(p); // Person(name=John, emailAddress=null)
 
-    Person p2 = new Person(null);
+    Person p2 = new Person(null); // compile OK, 
     // runtime -> java.lang.NullPointerException
-
-
-
-  } // main()
+  }
 }
