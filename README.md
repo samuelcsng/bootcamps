@@ -1160,9 +1160,22 @@ public class ClassName {
 
 ***
 ## Week-8 Day-5 20240927
+- interface extends interface
+  - Comparator
 
+- sql
+  - inner join + filtering = left/right join, ...
 
+- Test Driven Design (TDD)
+  - Agile Methodology (Principles)
+  - Test case first -> implement 
 
+- pom.xml
+  `<build>
+    ...
+  </build>`
+
+- .gitignore
 
 
 
