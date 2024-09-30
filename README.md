@@ -1177,6 +1177,12 @@ public class ClassName {
 
 - .gitignore
 
+- Hamcrest
+
+- Mockito
+  - ~(A -> B) === A & ~B
+  - Dependency Injection
+  - verify
 
 
 
