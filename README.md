@@ -1186,5 +1186,51 @@ public class ClassName {
 
 
 
+***
+## Week-9 Day-1 20240930
+- Mockito
+  - dependency test
+    - Mockito.when().thenReturn() + assertThat()
+    - verify(..., times([123...])).method()
+
+- Dependency Injection (DI)
+  - A depends on B -> @Mock B
+  - @ExtendWith(MockitoExtension.class)
+    - @Mock
+    - @Test
+      - when(obj.method(...)).thenReturn(...simulated_result...)
+      - assertThat(..., equalTo())
+      - verify(..., times(...)).method()
+
+- mvn clean install
+
+- handle null case
+  - @NonNull parameter
+
+- SQL Exercise Answers
+  - Exercise 4
+    - PostgresSQL
+      - DISTINCT ON
+    - Oracle, MySQL and PostgreSQL
+      - row_number() over (partition by ...)
+  - Exercise 2
+    - 2b
+      - consider using `UNIQUE KEY` for table creation
+
+  - Unit Test exercise
+    - furniture-factory
+
+
+***
+## Week-9 Day-2 20241001
+- Holiday: October-01
+
+
+***
+## Week-9 Day-3 20241002
+***
+## Week-9 Day-4 20241003
+***
+## Week-9 Day-5520241004
 
 

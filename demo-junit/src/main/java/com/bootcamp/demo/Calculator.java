@@ -1,10 +1,28 @@
 package com.bootcamp.demo;
 
-public class Calculator {
+import java.util.List;
 
+public class Calculator {
+  private List<Integer> arr;
+
+  public Calculator(List<Integer> arr) {
+    this.arr = arr;
+  }
+
+  public List<Integer> getScores() {
+    return this.arr;
+  }
+
+  public int findMin() {
+    int min = Integer.MAX_VALUE;
+    for (int x : this.arr) {
+      min = Math.min(x, min);
+    }
+    return min;
+  }
+
+  // if overflow, return -1;
   public static int sum(int x, int y) {
-    // return -1;
-    // return x + y;
     if ((long) x + (long) y > Integer.MAX_VALUE)
       return -1;
     return x + y;
@@ -17,13 +35,12 @@ public class Calculator {
     int max = Integer.MIN_VALUE;
     boolean withPositiveNumber = false;
     for (int x : arr) {
+      if (x >= 0)
+        withPositiveNumber = true;
       if (x > max) {
-        if (x >= 0)
-          withPositiveNumber = true;
         max = x;
       }
     }
-    // return max;
     return withPositiveNumber ? max : -1;
   }
 
