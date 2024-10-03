@@ -53,7 +53,7 @@ public class FurnitureOrder implements FurnitureOrderInterface {
     public float getTypeCost(Furniture type) {
         // TODO: Complete the method
         // return -1.0f;
-        return type.cost() * getTypeCount(type);
+        return type.cost() * this.getTypeCount(type); // int * float -> float
     }
 
     public int getTotalOrderQuantity() {

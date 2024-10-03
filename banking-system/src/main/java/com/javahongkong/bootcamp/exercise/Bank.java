@@ -7,11 +7,13 @@ public class Bank {
 
 	public Bank() {
 		// complete the function
+		this.accounts = new LinkedHashMap<>();
 	}
 
 	public Account getAccount(Long accountNumber) {
 		// complete the function
-		return null;
+		// return null;
+		return accounts.get(accountNumber);
 	}
 
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
