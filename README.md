@@ -1266,6 +1266,28 @@ public class ClassName {
 
 ***
 ## Week-9 Day-4 20241003
+
+- Spring boot pom.xml
+  - dependency: devtools
+  ```
+  <!-- Auto-recompile and restart server -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+  ```
+
+- JSON
+  - Chrome extension
+    - JSON formatter
+  - serialization deserialization
+- List.of()
+- DTO (Data Transfer Object), represents JSON object
+
+- model > mapper > dto > controller
+- API Gateway
+
 ***
 ## Week-9 Day-5520241004
 
