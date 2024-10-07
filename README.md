@@ -1260,7 +1260,10 @@ public class ClassName {
 
 - Spring Boot
   - Spring Boot Version 3 -> Spring Version 6
-  mvn spring-boot:run
+  - mvn spring-boot:run
+  - @Controller
+  - @ResponseBody
+  - @GetMapping(value = "...")
 
 
 
@@ -1285,10 +1288,25 @@ public class ClassName {
 - List.of()
 - DTO (Data Transfer Object), represents JSON object
 
-- model > mapper > dto > controller
+- Model > Mapper > DTO > Controller
+- Controller > DTO Mapper( Model ) 
 - API Gateway
 
 ***
 ## Week-9 Day-5520241004
 
+- AWS(Region > Availability Zone) Server EC2
+- pom.xml
+  -<scope> test </scope>
+  -<build> ...
+
+- AWS Certification Pathways
+  - Solution architect
+  - Software Development Engineer
+
+- Server EC2
+  - Web Layer > Controller > Service > Repository
+- Server RDB-PostgreSQL
+
+- @RestController = @Controller + @ResponseBody
 

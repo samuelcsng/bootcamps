@@ -1,17 +1,15 @@
 package com.javahongkong.bootcamp.exercise;
 
-public class Person {
+public class Person extends AccountHolder {
 	private String firstName;
 	private String lastName;
 	// private int idNumber;
-	private int idNumber;
 
 	public Person(String firstName, String lastName, int idNumber) {
 		// complete the function
+		super(idNumber);
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.idNumber = idNumber;
-
 	}
 
 	public String getFirstName() {
@@ -25,4 +23,10 @@ public class Person {
 		// return null;
 		return this.lastName;
 	}
+
+	// public int getIdNumber() {
+	// 	return super.getIdNumber();
+	// }
+
+	
 }

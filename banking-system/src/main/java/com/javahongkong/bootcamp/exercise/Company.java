@@ -1,13 +1,13 @@
 package com.javahongkong.bootcamp.exercise;
 
-public class Company {
+public class Company extends AccountHolder{
 	private String companyName;
 	private int taxId;
 
 	public Company(String companyName, int taxId) {
 		// complete the function
+		super(taxId);
 		this.companyName = companyName;
-		this.taxId = taxId;
 	}
 
 	public String getCompanyName() {
@@ -15,4 +15,10 @@ public class Company {
 		// return null;
 		return this.companyName;
 	}
+
+	// public int getTaxId() {
+	// 	return super.getIdNumber();
+	// }
+
+	
 }
