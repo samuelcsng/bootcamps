@@ -1293,7 +1293,7 @@ public class ClassName {
 - API Gateway
 
 ***
-## Week-9 Day-5520241004
+## Week-9 Day-5 20241004
 
 - AWS(Region > Availability Zone) Server EC2
 - pom.xml
@@ -1309,4 +1309,37 @@ public class ClassName {
 - Server RDB-PostgreSQL
 
 - @RestController = @Controller + @ResponseBody
+
+
+***
+## Week-10 Day-1 20241007
+
+- @Autowired(required = false)
+- Single Thread vs Multi-Thread
+- Spring vs Spring Boot
+- Spring Context
+- Database Dependency
+  JPA + PostgreSQL DB
+- Spring Concept
+  - bean
+  - IoC (Inversion of Control)
+  - dependency injection
+
+***
+## Week-10 Day-2 20241008
+
+
+
+***
+## Week-10 Day-3 20241009
+
+
+
+***
+## Week-10 Day-4 20241010
+
+
+
+***
+## Week-10 Day-5 20241011
 
