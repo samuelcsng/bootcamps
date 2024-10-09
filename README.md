@@ -1328,7 +1328,25 @@ public class ClassName {
 ***
 ## Week-10 Day-2 20241008
 
-
+- @Bean
+  - @Component
+    - @Controller
+    - @Service
+    - @Repository
+- @Configuration
+- @Autowired
+- @RestControllerAdvice
+  - @ExceptionHandler({RestClientException.class})
+- @PathVariable vs @RequestParam()
+- @ResponseStatus(...)
+- Restful API
+  - URI -> resource
+  - Get, Post, Delete, Put
+    - @DeleteMapping -> SQL: delete from
+    - @PutMapping -> SQL: update
+    - @GetMapping -> SQL: Select
+    - @PostMapping -> SQL: insert into
+- JSON payload of
 
 ***
 ## Week-10 Day-3 20241009
