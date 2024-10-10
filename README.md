@@ -1348,8 +1348,19 @@ public class ClassName {
     - @PostMapping -> SQL: insert into
 - JSON payload of
 
+
+
 ***
 ## Week-10 Day-3 20241009
+### Career Day
+- CV
+- JobsDB
+- LinkedIn
+- BA vs development
+- In-house(stable, ) vs Vendor(MNC) vs System Integrator(SI)(or Solution Provider)
+- Criteria
+  - Tech Stacks > Project Scale > Job Contenct > Company
+
 
 
 
@@ -1358,6 +1369,9 @@ public class ClassName {
 
 
 
+
+
+
 ***
 ## Week-10 Day-5 20241011
-
+### Holiday
