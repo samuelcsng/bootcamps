@@ -1366,8 +1366,12 @@ public class ClassName {
 
 ***
 ## Week-10 Day-4 20241010
+- jobsDB
+- career related
 
-
+- Spring Boot
+  - Controller call Service, Service call Repository
+  - DTO mapper (combine multiple SQL-DB Tables (using Join or ...) to one single DTO and send to consumer client request)
 
 
 
